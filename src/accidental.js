@@ -433,6 +433,7 @@ export class Accidental extends Modifier {
       parenRightPadding: 2,
     };
 
+	//this shouldn't give an error
     this.accidental = Flow.accidentalCodes(this.type);
     if (!this.accidental) {
       throw new Vex.RERR('ArgumentError', `Unknown accidental type: ${type}`);
