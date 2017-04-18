@@ -434,6 +434,7 @@ export class Accidental extends Modifier {
     };
 
 	//this shouldn't give an error
+	//this should draw nothing if no accidental is passed
     this.accidental = Flow.accidentalCodes(this.type);
     if (!this.accidental) {
       throw new Vex.RERR('ArgumentError', `Unknown accidental type: ${type}`);
